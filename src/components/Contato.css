@@ -1,0 +1,264 @@
+.contato-section {
+  background-color: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.contato-section .section-header span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-accent-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contato-wrapper {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Coluna de detalhes */
+.contato-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contato-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: rgba(10, 28, 54, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-fast);
+}
+
+.info-card:hover .info-icon-wrapper {
+  background-color: var(--color-primary);
+}
+
+.info-icon {
+  color: var(--color-accent-dark);
+  width: 22px;
+  height: 22px;
+  transition: color var(--transition-fast);
+}
+
+.info-card:hover .info-icon {
+  color: var(--color-accent-hover);
+}
+
+.info-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.info-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+}
+
+.info-link:hover {
+  color: var(--color-accent-dark);
+}
+
+.info-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.info-subtext {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+/* Card de Garantia e Reembolso */
+.contato-guarantee-card {
+  background: linear-gradient(135deg, rgba(10, 28, 54, 0.04) 0%, rgba(197, 168, 98, 0.08) 100%);
+  border: 1.5px solid rgba(197, 168, 98, 0.3);
+  padding: 24px;
+  border-radius: var(--radius-md);
+}
+
+.guarantee-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.guarantee-icon {
+  color: var(--color-accent-dark);
+  flex-shrink: 0;
+}
+
+.guarantee-header h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.contato-guarantee-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Coluna de formulário */
+.contato-form-column {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contato-form h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.form-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-white);
+  color: var(--color-text-dark);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(197, 168, 98, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.btn-submit {
+  flex: 1.2;
+}
+
+.btn-direct-whatsapp {
+  flex: 1.1;
+}
+
+/* Container de Sucesso */
+.form-success-container {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon {
+  color: #20BA5A;
+  margin-bottom: 24px;
+}
+
+.form-success-container h3 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.form-success-container p {
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .contato-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contato-form-column {
+    padding: 30px 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,122 @@
+.artigos-section {
+  background-color: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.artigos-section .section-header span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-accent-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.artigos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.artigo-card {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.artigo-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.artigo-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.artigo-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent-dark);
+  background-color: rgba(197, 168, 98, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.artigo-date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.artigo-title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  transition: var(--transition-fast);
+}
+
+.artigo-card:hover .artigo-title {
+  color: var(--color-accent-dark);
+}
+
+.artigo-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.artigo-readmore {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+}
+
+.arrow-icon {
+  transition: transform var(--transition-fast);
+}
+
+.artigo-card:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.artigo-card:hover .artigo-readmore {
+  color: var(--color-accent-dark);
+}
+
+.artigos-more {
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .artigos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

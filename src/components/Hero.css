@@ -1,0 +1,496 @@
+/* ==========================================================================
+   HERO SECTION - LUXURY MEDICAL ENTRANCE (INSPIRADO EM SAUDEGABRIEL.COM.BR)
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 96vh;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  background: linear-gradient(135deg, #071426 0%, #0A1C36 50%, #061220 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Efeitos de Iluminação Ambiente / Luz Radial */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 75% 45%, rgba(197, 168, 98, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(22, 44, 78, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-glow-gold {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(197, 168, 98, 0.08) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-glow-blue {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(22, 60, 110, 0.3) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 12;
+}
+
+/* ==========================================================================
+   1. TÍTULO PRINCIPAL & LOGO GRANDE TRANSPARENTE (ENTRADA SUAVE PELA ESQUERDA)
+   ========================================================================== */
+
+.hero-anim-title {
+  opacity: 0;
+  transform: translateX(-90px);
+  animation: heroEnterTitle 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+  margin-bottom: 24px;
+}
+
+@keyframes heroEnterTitle {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.hero-emblem-large {
+  height: 115px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 20px rgba(197, 168, 98, 0.45));
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
+}
+
+.hero-brand-block:hover .hero-emblem-large {
+  transform: scale(1.04);
+}
+
+.hero-name-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-crm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-accent-hover);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(197, 168, 98, 0.25);
+  margin-bottom: 8px;
+}
+
+.badge-shield-icon {
+  color: var(--color-accent);
+}
+
+.hero-doctor-name {
+  font-family: var(--font-heading);
+  font-size: 3.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  line-height: 1.1;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.hero-title-sub {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.3;
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   2. SUBTÍTULO & DESTAQUES (Left entrance, delay 0.5s)
+   ========================================================================== */
+
+.hero-anim-subtitle {
+  opacity: 0;
+  transform: translateX(-70px);
+  animation: heroEnterSubtitle 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  margin-bottom: 36px;
+}
+
+@keyframes heroEnterSubtitle {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 580px;
+}
+
+.hero-features {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-item .bullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-full);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+/* ==========================================================================
+   3. BOTÕES CTA & SOCIAIS (Bottom-Up entrance, delay 0.7s)
+   ========================================================================== */
+
+.hero-anim-cta {
+  opacity: 0;
+  transform: translateY(35px);
+  animation: heroEnterCta 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+  width: 100%;
+}
+
+@keyframes heroEnterCta {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.btn-hero-primary {
+  background: linear-gradient(135deg, #C5A862 0%, #E3C57F 50%, #A38545 100%);
+  color: #071426 !important;
+  font-weight: 700;
+  padding: 16px 34px;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px -5px rgba(197, 168, 98, 0.4);
+  transition: all var(--transition-normal);
+  border: none;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px -5px rgba(227, 197, 127, 0.5);
+  background: linear-gradient(135deg, #E3C57F 0%, #FFF2B2 50%, #C5A862 100%);
+}
+
+.btn-hero-secondary {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(197, 168, 98, 0.6);
+  padding: 16px 28px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-normal);
+}
+
+.btn-hero-secondary:hover {
+  background-color: rgba(197, 168, 98, 0.15);
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover) !important;
+  transform: translateY(-3px);
+}
+
+.hero-social-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.social-icon-btn.whatsapp:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.social-icon-btn.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: transparent;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(214, 36, 159, 0.4);
+}
+
+.social-icon-btn.email:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(197, 168, 98, 0.4);
+}
+
+/* ==========================================================================
+   4. IMAGEM DO MÉDICO (TRANSPARENTE / ENTRADA PELA DIREITA, DELAY 0.2s)
+   ========================================================================== */
+
+.hero-doctor {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  height: 90%;
+  max-height: 780px;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(180px) scale(0.96);
+  animation: heroEnterDoctor 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@keyframes heroEnterDoctor {
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.hero-doctor-img {
+  height: 100%;
+  width: auto;
+  max-width: 550px;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.6));
+  display: block;
+}
+
+.doctor-gradient-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #071426);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (DESKTOP, NOTEBOOK, TABLET, MOBILE)
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  .hero-doctor {
+    right: 2%;
+    height: 82%;
+  }
+
+  .hero-doctor-name {
+    font-size: 2.7rem;
+  }
+
+  .hero-emblem-large {
+    height: 95px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding-top: 140px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-doctor {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    height: auto;
+    max-height: 480px;
+    margin: 40px auto 0;
+    justify-content: center;
+    width: 100%;
+    transform: translateY(60px) scale(0.96);
+    animation: heroEnterDoctorMobile 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+  }
+
+  @keyframes heroEnterDoctorMobile {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .hero-doctor-img {
+    max-height: 460px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-brand-block {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .hero-name-block {
+    align-items: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-social-strip {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-doctor-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-title-sub {
+    font-size: 1.25rem;
+  }
+
+  .hero-emblem-large {
+    height: 85px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-doctor-img {
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 120px;
+  }
+
+  .hero-doctor-name {
+    font-size: 1.85rem;
+  }
+
+  .hero-emblem-large {
+    height: 75px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-doctor-img {
+    max-height: 320px;
+  }
+}
