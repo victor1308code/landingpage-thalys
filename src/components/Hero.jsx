@@ -123,14 +123,13 @@ export default function Hero() {
 
           </div>
 
-          {/* Doctor Highlight Cutout */}
+          {/* Doctor Highlight Cutout without fade */}
           <div className="hero-doctor">
             <img 
               src={doctorHeroImg} 
               alt="Dr. Thalys Carvalho Layber - Médico Clínico Geral" 
               className="hero-doctor-img"
             />
-            <div className="doctor-gradient-fade"></div>
           </div>
 
         </div>

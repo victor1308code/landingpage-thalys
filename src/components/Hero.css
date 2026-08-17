@@ -371,17 +371,6 @@
   filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.5));
 }
 
-.doctor-gradient-fade {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background: linear-gradient(to bottom, transparent 0%, #071426 100%);
-  pointer-events: none;
-  z-index: 6;
-}
-
 /* ==========================================================================
    RESPONSIVIDADE (DESKTOP, NOTEBOOK, TABLET, MOBILE)
    ========================================================================== */
@@ -511,10 +500,6 @@
     object-fit: contain !important;
     object-position: bottom center !important;
     margin: 0 auto !important;
-  }
-
-  .doctor-gradient-fade {
-    height: 75px !important;
   }
 
   /* 3. BOTÃO DE AGENDAMENTO (CTA) LOGO ABAIXO DA FOTO */
