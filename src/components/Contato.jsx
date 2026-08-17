@@ -97,14 +97,14 @@ export default function Contato() {
 
             </div>
 
-            {/* Destaque de Segurança e Reembolso */}
+            {/* Destaque de Atendimento Particular & Receita Digital */}
             <div className="contato-guarantee-card">
               <div className="guarantee-header">
                 <FileText size={22} className="guarantee-icon" />
-                <h4>Atendimento Particular & Reembolso</h4>
+                <h4>Atendimento Particular & Receita Digital</h4>
               </div>
               <p>
-                Após o atendimento, fornecemos relatório médico detalhado e nota fiscal para que você possa solicitar o reembolso de forma simples junto ao seu plano de saúde.
+                Atendimento médico dedicado, com emissão de receitas digitais, atestados e pedidos de exames com certificado ICP-Brasil aceitos em farmácias e laboratórios de todo o país.
               </p>
             </div>
           </div>

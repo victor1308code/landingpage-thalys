@@ -70,15 +70,15 @@ export default function Servicos() {
           ))}
         </div>
 
-        {/* Banner de Destaque da Telemedicina & Reembolso */}
+        {/* Banner de Destaque da Telemedicina */}
         <div className="telemedicina-highlight-banner scroll-reveal reveal-up delay-3">
           <div className="telemed-icon-wrapper">
             <CheckCircle2 size={32} className="telemed-gold-icon" />
           </div>
           <div className="telemed-text-wrapper">
-            <h4>Atendimento por Telemedicina com Validade Nacional & Reembolso</h4>
+            <h4>Atendimento por Telemedicina com Validade Nacional</h4>
             <p>
-              Consultas online com segurança, privacidade e conforto para pacientes de todo o Brasil. Atendimento particular com emissão de nota fiscal e relatório médico para você solicitar reembolso no seu plano de saúde com facilidade.
+              Consultas online com segurança, privacidade e conforto para pacientes de todo o Brasil. Atendimento particular com emissão de receitas, pedidos de exames e atestados digitais com certificação eletrônica oficial (ICP-Brasil).
             </p>
           </div>
         </div>

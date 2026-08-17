@@ -15,8 +15,8 @@ export default function FAQ() {
       answer: "Sim! Todos os documentos médicos emitidos pelo Dr. Thalys contam com assinatura digital certificada pelo padrão ICP-Brasil (com QR Code de validação). Eles têm validade jurídica plena e são aceitos em qualquer farmácia (inclusive para medicamentos de controle especial), laboratório de análises clínicas e operadora de saúde em todo o território nacional."
     },
     {
-      question: "O Dr. Thalys aceita convênios ou planos de saúde? Como funciona o reembolso?",
-      answer: "Os atendimentos são exclusivamente particulares, o que garante tempo dedicado e sem pressa para cada paciente. Após a teleconsulta, fornecemos a nota fiscal do serviço médico e o relatório clínico necessário para que você solicite o reembolso (integral ou parcial) direto no aplicativo do seu convênio/plano de saúde com facilidade."
+      question: "O Dr. Thalys aceita convênios ou planos de saúde?",
+      answer: "Os atendimentos são exclusivamente particulares. Isso garante tempo dedicado, escuta atenta e sem pressa para cada paciente, proporcionando uma avaliação clínica integral e acompanhamento médico personalizado."
     },
     {
       question: "Quais queixas ou sintomas posso avaliar por teleconsulta?",
@@ -39,7 +39,7 @@ export default function FAQ() {
         <div className="section-header scroll-reveal reveal-down">
           <span>FAQ</span>
           <h2>Dúvidas Frequentes sobre Telemedicina</h2>
-          <p>Tudo o que você precisa saber sobre as consultas online, emissão de documentos digitais e reembolso.</p>
+          <p>Tudo o que você precisa saber sobre as consultas online e emissão de documentos digitais.</p>
         </div>
 
         <div className="faq-list">
