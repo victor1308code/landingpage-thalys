@@ -26,7 +26,6 @@ export default function Footer() {
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#servicos">Especialidades</a></li>
             <li><a href="#artigos">Artigos</a></li>
-            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contato">Agendamento</a></li>
           </ul>
 

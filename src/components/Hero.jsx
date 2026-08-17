@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Shield, Mail, ArrowRight, Video, FileCheck, Award } from 'lucide-react';
+import { MessageSquare, Shield, Mail, ArrowRight, Video, HeartHandshake, Award } from 'lucide-react';
 import doctorTransparent from '../assets/images/doctor-hero-transparent.png';
 import logoEmblem from '../assets/images/logo-emblem-clean.png';
 import './Hero.css';
@@ -43,7 +43,7 @@ export default function Hero() {
           {/* Subtitle & Highlights (Animation: Left entrance, delay 0.5s) */}
           <div className="hero-anim-subtitle">
             <p className="hero-description">
-              Consultas médicas online completas e individualizadas no conforto da sua casa, para pacientes de todo o Brasil. Avaliação minuciosa, escuta atenta, check-up preventivo e prescrição digital com validade nacional.
+              Consultas médicas online completas e individualizadas no conforto da sua casa, para pacientes de todo o Brasil. Avaliação minuciosa, escuta atenta, check-up preventivo e condutas fundamentadas em evidências científicas.
             </p>
             
             <div className="hero-features">
@@ -52,8 +52,8 @@ export default function Hero() {
                 <span>100% Teleconsulta Nacional</span>
               </div>
               <div className="feature-item">
-                <FileCheck size={16} className="feature-gold-icon" />
-                <span>Receituário & Atestado Digital</span>
+                <HeartHandshake size={16} className="feature-gold-icon" />
+                <span>Avaliação Clínica Completa</span>
               </div>
               <div className="feature-item">
                 <Award size={16} className="feature-gold-icon" />

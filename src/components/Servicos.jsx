@@ -17,7 +17,7 @@ export default function Servicos() {
     {
       icon: <Zap className="servico-icon" />,
       title: "Cansaço Excessivo & Fadiga",
-      description: "Investigação minuciosa das causas de esgotamento físico, sono não reparador, estresse crônico, deficiências nutricionais e alterações hormonais."
+      description: "Investigação minuciosa das causas de esgotamento físico, sono não reparador, estresse crônico, deficiências nutricionais e alterações metabólicas."
     },
     {
       icon: <Stethoscope className="servico-icon" />,
@@ -76,9 +76,9 @@ export default function Servicos() {
             <CheckCircle2 size={32} className="telemed-gold-icon" />
           </div>
           <div className="telemed-text-wrapper">
-            <h4>100% Teleconsulta com Validade Nacional & Reembolso</h4>
+            <h4>Atendimento por Telemedicina com Validade Nacional & Reembolso</h4>
             <p>
-              Receitas de medicamentos (incluindo controlados), atestados e pedidos de exames com <strong>assinatura digital ICP-Brasil</strong> aceitos em todo o território nacional. Atendimento particular com emissão de nota fiscal e relatório para você solicitar reembolso no seu plano de saúde.
+              Consultas online com segurança, privacidade e conforto para pacientes de todo o Brasil. Atendimento particular com emissão de nota fiscal e relatório médico para você solicitar reembolso no seu plano de saúde com facilidade.
             </p>
           </div>
         </div>

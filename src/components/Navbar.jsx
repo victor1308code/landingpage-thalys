@@ -16,7 +16,7 @@ export default function Navbar() {
         setScrolled(false);
       }
 
-      const sections = ['inicio', 'sobre', 'servicos', 'artigos', 'faq', 'contato'];
+      const sections = ['inicio', 'sobre', 'servicos', 'artigos', 'contato'];
       const scrollPosition = window.scrollY + 200;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -96,14 +96,6 @@ export default function Navbar() {
             </li>
             <li>
               <a 
-                href="#faq" 
-                className={activeSection === 'faq' ? 'active' : ''}
-              >
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a 
                 href="#contato" 
                 className={`btn-nav ${activeSection === 'contato' ? 'active' : ''}`}
               >
@@ -163,20 +155,11 @@ export default function Navbar() {
               </li>
               <li>
                 <a 
-                  href="#faq" 
-                  className={activeSection === 'faq' ? 'active' : ''} 
-                  onClick={handleLinkClick}
-                >
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a 
                   href="#contato" 
                   className={`btn-nav-mobile ${activeSection === 'contato' ? 'active' : ''}`} 
                   onClick={handleLinkClick}
                 >
-                  Agendar Consulta
+                  Agendar Teleconsulta
                 </a>
               </li>
             </ul>

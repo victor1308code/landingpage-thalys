@@ -5,7 +5,6 @@ import Sobre from './components/Sobre';
 import Servicos from './components/Servicos';
 import Depoimentos from './components/Depoimentos';
 import Artigos from './components/Artigos';
-import FAQ from './components/FAQ';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -23,7 +22,6 @@ function App() {
         <Servicos />
         <Depoimentos />
         <Artigos />
-        <FAQ />
         <Contato />
       </main>
       <Footer />
