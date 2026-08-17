@@ -38,16 +38,17 @@ export default function Sobre() {
                 <span className="badge-txt">MÉDICO CLÍNICO GERAL</span>
               </div>
             </div>
-
-            {/* Floating UNIRIO Tag */}
-            <div className="sobre-floating-tag">
-              <Award size={16} className="tag-gold-icon" />
-              <span>Residência Médica UNIRIO</span>
-            </div>
           </div>
 
-          {/* Destaques Rápidos Acadêmicos */}
+          {/* Destaques Rápidos Acadêmicos & Residência */}
           <div className="sobre-awards-strip scroll-reveal reveal-up delay-4">
+            <div className="award-mini-card">
+              <Award size={20} className="award-gold-icon" />
+              <div>
+                <strong>Residência Médica</strong>
+                <p>Clínica Médica UNIRIO / HUGG</p>
+              </div>
+            </div>
             <div className="award-mini-card">
               <Trophy size={20} className="award-gold-icon" />
               <div>

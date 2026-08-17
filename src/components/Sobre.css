@@ -160,38 +160,13 @@
   margin-top: 2px;
 }
 
-/* Tag Flutuante UNIRIO */
-.sobre-floating-tag {
-  position: absolute;
-  top: 40px;
-  left: -10px;
-  background: rgba(7, 20, 38, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #FFFFFF;
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(197, 168, 98, 0.4);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  z-index: 4;
-}
-
-.tag-gold-icon {
-  color: var(--color-accent-hover);
-}
-
-/* Cards de Prêmios e Certificação */
+/* Cards de Prêmios, Certificação e Residência abaixo da foto */
 .sobre-awards-strip {
   width: 100%;
   max-width: 440px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .award-mini-card {
@@ -503,16 +478,5 @@
     margin-top: 16px;
     width: 100%;
     justify-content: center;
-  }
-
-  .sobre-floating-tag {
-    top: 20px;
-    left: -5px;
-    font-size: 0.75rem;
-    padding: 6px 12px;
-  }
-
-  .sobre-awards-strip {
-    grid-template-columns: 1fr;
   }
 }
