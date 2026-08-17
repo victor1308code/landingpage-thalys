@@ -1,41 +1,41 @@
 /* ==========================================================================
-   HERO SECTION - LUXURY MEDICAL CLEAN THEME (ESTILO SAUDEGABRIEL.COM.BR)
+   HERO SECTION - LUXURY DARK BLUE THEME (DR. THALYS LAYBER)
    ========================================================================== */
 
 .hero-section {
   position: relative;
-  min-height: 94vh;
-  padding-top: 160px;
+  min-height: 96vh;
+  padding-top: 150px;
   padding-bottom: 0;
-  background-color: var(--color-bg-white);
-  color: var(--color-text-dark);
+  background: linear-gradient(135deg, #071426 0%, #0A1C36 50%, #061220 100%);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   overflow: hidden;
   z-index: 1;
 }
 
-/* Efeitos de Iluminação Ambiente Sutil e Sofisticada */
+/* Efeitos de Iluminação Ambiente / Luz Radial */
 .hero-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 80% 25%, rgba(197, 168, 98, 0.09) 0%, transparent 55%),
-              radial-gradient(circle at 15% 85%, rgba(10, 28, 54, 0.03) 0%, transparent 60%);
+  background: radial-gradient(circle at 75% 45%, rgba(197, 168, 98, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(22, 44, 78, 0.4) 0%, transparent 70%);
   pointer-events: none;
   z-index: 1;
 }
 
 .hero-glow-gold {
   position: absolute;
-  top: 10%;
-  right: 12%;
+  top: 15%;
+  right: 15%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(197, 168, 98, 0.06) 0%, transparent 70%);
-  filter: blur(60px);
+  background: radial-gradient(circle, rgba(197, 168, 98, 0.08) 0%, transparent 70%);
+  filter: blur(50px);
   pointer-events: none;
   z-index: 1;
 }
@@ -43,10 +43,10 @@
 .hero-glow-blue {
   position: absolute;
   bottom: 0;
-  left: 5%;
-  width: 450px;
+  left: 10%;
+  width: 500px;
   height: 350px;
-  background: radial-gradient(circle, rgba(10, 28, 54, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(22, 60, 110, 0.3) 0%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 1;
@@ -67,12 +67,12 @@
 }
 
 /* ==========================================================================
-   1. TÍTULO PRINCIPAL & LOGO
+   1. TÍTULO PRINCIPAL & LOGO GRANDE TRANSPARENTE
    ========================================================================== */
 
 .hero-anim-title {
   opacity: 0;
-  transform: translateX(-70px);
+  transform: translateX(-90px);
   animation: heroEnterTitle 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
   margin-bottom: 24px;
 }
@@ -91,10 +91,10 @@
 }
 
 .hero-emblem-large {
-  height: 110px;
+  height: 115px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 14px rgba(197, 168, 98, 0.35));
+  filter: drop-shadow(0 6px 20px rgba(197, 168, 98, 0.45));
   flex-shrink: 0;
   transition: transform var(--transition-normal);
 }
@@ -117,33 +117,34 @@
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--color-accent-dark);
-  background: rgba(10, 28, 54, 0.04);
-  padding: 5px 14px;
+  color: var(--color-accent-hover);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(197, 168, 98, 0.35);
+  border: 1px solid rgba(197, 168, 98, 0.25);
   margin-bottom: 8px;
 }
 
 .badge-shield-icon {
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
 }
 
 .hero-doctor-name {
   font-family: var(--font-heading);
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--color-primary);
+  letter-spacing: 2px;
+  color: #FFFFFF;
   line-height: 1.1;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
 
 .hero-title-sub {
   font-family: var(--font-heading);
   font-size: 1.45rem;
-  font-weight: 600;
-  color: var(--color-accent-dark);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.3;
   margin-top: 6px;
 }
@@ -154,9 +155,9 @@
 
 .hero-anim-subtitle {
   opacity: 0;
-  transform: translateX(-50px);
-  animation: heroEnterSubtitle 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
-  margin-bottom: 34px;
+  transform: translateX(-70px);
+  animation: heroEnterSubtitle 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  margin-bottom: 36px;
 }
 
 @keyframes heroEnterSubtitle {
@@ -168,7 +169,7 @@
 
 .hero-description {
   font-size: 1.1rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.7;
   margin-bottom: 24px;
   max-width: 580px;
@@ -176,7 +177,7 @@
 
 .hero-features {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -187,16 +188,15 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--color-primary);
-  background: var(--color-bg-light);
-  padding: 7px 16px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .feature-gold-icon {
-  color: var(--color-accent-dark);
+  color: var(--color-accent-hover);
 }
 
 /* ==========================================================================
@@ -205,8 +205,8 @@
 
 .hero-anim-cta {
   opacity: 0;
-  transform: translateY(30px);
-  animation: heroEnterCta 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  transform: translateY(35px);
+  animation: heroEnterCta 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
   width: 100%;
 }
 
@@ -246,12 +246,14 @@
 }
 
 .btn-hero-secondary {
-  background-color: var(--color-bg-light);
-  color: var(--color-primary) !important;
-  border: 1.5px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(197, 168, 98, 0.6);
   padding: 16px 28px;
   font-weight: 600;
   border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: all var(--transition-normal);
   display: inline-flex;
   align-items: center;
@@ -259,11 +261,10 @@
 }
 
 .btn-hero-secondary:hover {
-  background-color: var(--color-primary);
-  color: #FFFFFF !important;
-  border-color: var(--color-primary);
+  background-color: rgba(197, 168, 98, 0.15);
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover) !important;
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
 }
 
 .hero-social-strip {
@@ -274,7 +275,7 @@
 
 .social-label {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
 }
 
@@ -287,9 +288,9 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-border);
-  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +302,7 @@
   border-color: #25D366;
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
 }
 
 .social-icon-btn.instagram:hover {
@@ -309,27 +310,27 @@
   border-color: transparent;
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(214, 36, 159, 0.35);
+  box-shadow: 0 6px 16px rgba(214, 36, 159, 0.4);
 }
 
 .social-icon-btn.email:hover {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-accent-hover);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(10, 28, 54, 0.25);
+  box-shadow: 0 6px 16px rgba(197, 168, 98, 0.4);
 }
 
 /* ==========================================================================
-   4. IMAGEM DO MÉDICO (TRANSPARENTE / ANCORADA NA BASE)
+   4. IMAGEM DO MÉDICO (ALTURA CALIBRADA PARA NUNCA CORTAR A CABEÇA + FADE NA BASE)
    ========================================================================== */
 
 .hero-doctor {
   position: absolute;
-  right: 4%;
+  right: 5%;
   bottom: 0;
-  height: 94%;
-  max-height: 820px;
+  height: 80%;
+  max-height: 640px;
   z-index: 5;
   pointer-events: none;
   opacity: 0;
@@ -357,9 +358,7 @@
   display: block;
   vertical-align: bottom;
   margin-bottom: 0;
-  filter: drop-shadow(0 15px 35px rgba(10, 28, 54, 0.12));
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 100%);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.45));
 }
 
 .doctor-gradient-fade {
@@ -367,8 +366,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom, transparent 0%, var(--color-bg-white) 100%);
+  height: 90px;
+  background: linear-gradient(to bottom, transparent 0%, #071426 100%);
   pointer-events: none;
   z-index: 6;
 }
@@ -377,10 +376,18 @@
    RESPONSIVIDADE (DESKTOP, NOTEBOOK, TABLET, MOBILE)
    ========================================================================== */
 
+@media (min-width: 1440px) {
+  .hero-doctor {
+    height: 82%;
+    max-height: 680px;
+  }
+}
+
 @media (max-width: 1280px) {
   .hero-doctor {
     right: 2%;
-    height: 88%;
+    height: 76%;
+    max-height: 580px;
   }
 
   .hero-doctor-name {
@@ -394,13 +401,14 @@
 
 @media (max-width: 1024px) {
   .hero-section {
-    padding-top: 140px;
-    min-height: auto;
-    padding-bottom: 0 !important;
+    padding-top: 130px;
+    padding-bottom: 40px !important;
+    min-height: 85vh;
     display: flex;
-    flex-direction: column !important;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
   }
 
   .hero-container {
@@ -410,66 +418,69 @@
   }
 
   .hero-content {
-    max-width: 100%;
-    align-items: center;
-    text-align: center;
+    max-width: 60%;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    z-index: 10;
   }
 
   .hero-brand-block {
-    flex-direction: column;
-    gap: 14px;
+    flex-direction: row;
+    gap: 16px;
     align-items: center;
   }
 
   .hero-name-block {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .hero-features {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-cta-group {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-social-strip {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
+  /* Doctor Image na lateral direita no Tablet / Celular */
   .hero-doctor {
-    position: relative !important;
-    right: auto !important;
+    position: absolute !important;
+    right: -10px !important;
     bottom: 0 !important;
     left: auto !important;
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-    max-height: 520px;
-    margin: 28px auto 0 auto !important;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    width: 44% !important;
+    max-width: 320px !important;
+    height: 75% !important;
+    max-height: 520px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-end !important;
     line-height: 0;
     padding-bottom: 0 !important;
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+    z-index: 4 !important;
+    pointer-events: none;
   }
 
   .hero-doctor-img {
-    width: 100%;
-    max-width: 390px;
-    max-height: 480px;
-    height: auto;
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 100% !important;
     display: block;
     object-fit: contain;
-    object-position: bottom center;
+    object-position: bottom right;
     vertical-align: bottom;
-    margin: 0 auto 0 auto;
-    filter: drop-shadow(0 10px 25px rgba(10, 28, 54, 0.1));
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+    margin: 0 0 0 auto;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.45));
   }
 
   .doctor-gradient-fade {
@@ -477,75 +488,127 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80px;
-    background: linear-gradient(to bottom, transparent 0%, var(--color-bg-white) 100%);
+    height: 70px;
+    background: linear-gradient(to bottom, transparent 0%, #071426 100%);
     pointer-events: none;
     z-index: 6;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 30px !important;
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    max-width: 58%;
+  }
+
   .hero-doctor-name {
-    font-size: 2.2rem;
+    font-size: 1.95rem;
   }
 
   .hero-title-sub {
-    font-size: 1.25rem;
-  }
-
-  .hero-emblem-large {
-    height: 85px;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .hero-doctor {
-    max-width: 360px;
-    margin-top: 20px !important;
-  }
-
-  .hero-doctor-img {
-    max-width: 340px;
-    max-height: 420px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding-top: 115px;
-    padding-bottom: 0 !important;
-  }
-
-  .hero-doctor-name {
-    font-size: 1.85rem;
+    font-size: 1.1rem;
   }
 
   .hero-emblem-large {
     height: 75px;
   }
 
-  .hero-cta-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-cta-group .btn {
-    width: 100%;
+  .hero-description {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
   }
 
   .hero-doctor {
-    max-width: 300px;
-    margin-top: 16px !important;
+    right: -15px !important;
+    width: 46% !important;
+    max-width: 260px !important;
+    height: 70% !important;
+    max-height: 440px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 25px !important;
+    min-height: 78vh;
   }
 
-  .hero-doctor-img {
-    max-width: 280px;
-    max-height: 360px;
+  .hero-content {
+    max-width: 56%;
+  }
+
+  .hero-brand-block {
+    gap: 10px;
+  }
+
+  .hero-emblem-large {
+    height: 60px;
+  }
+
+  .hero-crm-badge {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .hero-doctor-name {
+    font-size: 1.55rem;
+  }
+
+  .hero-title-sub {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .hero-features {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .feature-item {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    gap: 5px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .btn-hero-primary {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+
+  .btn-hero-secondary {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+
+  .hero-doctor {
+    right: -20px !important;
+    width: 48% !important;
+    max-width: 210px !important;
+    height: 66% !important;
+    max-height: 380px !important;
   }
 
   .doctor-gradient-fade {
-    height: 60px;
+    height: 55px;
   }
 }

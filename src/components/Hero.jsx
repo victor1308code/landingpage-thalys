@@ -1,7 +1,7 @@
 import React from 'react';
 import { Shield, Mail, ArrowRight, Video, HeartHandshake, Award } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
-import doctorTransparent from '../assets/images/doctor-hero-transparent.png';
+import doctorHeroImg from '../assets/images/doctor-hero-final.png';
 import logoEmblem from '../assets/images/logo-emblem-clean.png';
 import './Hero.css';
 
@@ -12,8 +12,10 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="hero-section">
-      {/* Background ambient lighting overlay */}
+      {/* Background ambient lighting effects (Luxury Dark Blue) */}
       <div className="hero-bg-overlay"></div>
+      <div className="hero-glow-gold"></div>
+      <div className="hero-glow-blue"></div>
 
       <div className="container hero-container">
         <div className="hero-content">
@@ -123,10 +125,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Doctor Transparent Cutout Image */}
+      {/* Doctor Cutout from HERO.jpg with smooth bottom fade */}
       <div className="hero-doctor">
         <img 
-          src={doctorTransparent} 
+          src={doctorHeroImg} 
           alt="Dr. Thalys Carvalho Layber - Médico Clínico Geral" 
           className="hero-doctor-img"
         />
