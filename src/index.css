@@ -250,8 +250,10 @@ section {
 .delay-6 { transition-delay: 0.6s; }
 
 /* Estado final visível */
-.scroll-reveal.is-visible {
-  opacity: 1;
-  transform: translate(0, 0) scale(1);
+.scroll-reveal.is-visible,
+.scroll-reveal.is-revealed,
+.scroll-reveal[data-revealed="true"] {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
 }
 

@@ -71,9 +71,9 @@
 }
 
 .artigo-desc {
-  color: var(--color-text-dark);
+  color: var(--color-text-muted);
   font-size: 0.91rem;
-  line-height: 1.7;
+  line-height: 1.65;
   margin-bottom: 24px;
   flex-grow: 1;
 }
@@ -81,35 +81,195 @@
 .artigo-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: auto;
   border-top: 1px solid var(--color-border);
   padding-top: 16px;
 }
 
-.artigo-cta-whatsapp {
+.artigo-readmore-btn {
+  background: none;
+  border: none;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  background-color: rgba(37, 211, 102, 0.12);
-  color: #128C7E;
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-decoration: none;
+  gap: 8px;
+  color: var(--color-accent-dark);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
   transition: all var(--transition-fast);
-  width: 100%;
-  justify-content: center;
 }
 
-.artigo-cta-whatsapp:hover {
-  background-color: #25D366;
+.artigo-readmore-btn:hover {
+  color: var(--color-primary);
+  gap: 12px;
+}
+
+.artigo-readmore-btn .arrow-icon {
+  transition: transform var(--transition-fast);
+}
+
+.artigo-readmore-btn:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   MODAL DE LEITURA DO ARTIGO
+   ========================================================================== */
+
+.article-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(7, 20, 38, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.article-modal-content {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-premium);
+  border: 1.5px solid var(--color-accent);
+  position: relative;
+  padding: 40px;
+  animation: modalSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.article-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(10, 28, 54, 0.06);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.article-modal-close:hover {
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  border-color: #25D366;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.modal-header {
+  margin-bottom: 24px;
+  padding-right: 40px;
+}
+
+.modal-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-accent-dark);
+  text-transform: uppercase;
+  background-color: rgba(197, 168, 98, 0.12);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.modal-author-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.verified-gold {
+  color: var(--color-accent-dark);
+}
+
+.modal-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.modal-body {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--color-text-dark);
+  margin-bottom: 30px;
+  border-left: 3.5px solid var(--color-accent);
+  padding-left: 20px;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: 24px;
+}
+
+.modal-cta-box {
+  background: linear-gradient(135deg, rgba(10, 28, 54, 0.04) 0%, rgba(197, 168, 98, 0.08) 100%);
+  border: 1px solid rgba(197, 168, 98, 0.3);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.modal-cta-text h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.modal-cta-text p {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.modal-whatsapp-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* CTA Intermediário */
@@ -179,5 +339,18 @@
     flex-direction: column;
     text-align: center;
     padding: 30px 20px;
+  }
+
+  .article-modal-content {
+    padding: 25px 20px;
+  }
+
+  .modal-cta-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-whatsapp-btn {
+    width: 100%;
   }
 }
