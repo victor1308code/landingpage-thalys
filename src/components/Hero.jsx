@@ -43,10 +43,6 @@ export default function Hero() {
 
           {/* Subtitle & Highlights (Animation: Left entrance, delay 0.5s) */}
           <div className="hero-anim-subtitle">
-            <p className="hero-description">
-              Consultas médicas online completas e individualizadas no conforto da sua casa, para pacientes de todo o Brasil. Avaliação minuciosa, escuta atenta, check-up preventivo e condutas fundamentadas em evidências científicas.
-            </p>
-            
             <div className="hero-features">
               <div className="feature-item">
                 <Video size={16} className="feature-gold-icon" />

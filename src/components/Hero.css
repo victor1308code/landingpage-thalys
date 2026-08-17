@@ -123,6 +123,7 @@
   border-radius: var(--radius-full);
   border: 1px solid rgba(197, 168, 98, 0.25);
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 .badge-shield-icon {
@@ -157,7 +158,7 @@
   opacity: 0;
   transform: translateX(-70px);
   animation: heroEnterSubtitle 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
 @keyframes heroEnterSubtitle {
@@ -165,14 +166,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.hero-description {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.7;
-  margin-bottom: 24px;
-  max-width: 580px;
 }
 
 .hero-features {
@@ -465,13 +458,6 @@
     margin: 6px auto 0 auto;
   }
 
-  .hero-description {
-    font-size: 1.05rem;
-    text-align: center;
-    max-width: 600px;
-    margin: 18px auto 24px auto;
-  }
-
   .hero-features {
     justify-content: center;
     margin: 0 auto 28px auto;
@@ -553,12 +539,6 @@
     font-size: 1.15rem;
   }
 
-  .hero-description {
-    font-size: 0.96rem;
-    line-height: 1.6;
-    margin: 16px auto 20px auto;
-  }
-
   .hero-features {
     gap: 10px;
     margin-bottom: 22px;
@@ -610,12 +590,6 @@
   .hero-title-sub {
     font-size: 1.05rem;
     line-height: 1.35;
-  }
-
-  .hero-description {
-    font-size: 0.9rem;
-    line-height: 1.55;
-    margin: 14px auto 18px auto;
   }
 
   .hero-features {
