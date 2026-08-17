@@ -210,50 +210,20 @@ section {
 }
 
 /* ==========================================================================
-   SCROLL REVEAL / MONTAGEM DE ELEMENTOS (CUBIC-BEZIER SUAVE)
+   SCROLL REVEAL / MONTAGEM DE ELEMENTOS (SEMPRE VISÍVEL & ESTÁVEL)
    ========================================================================== */
 
 .scroll-reveal {
-  opacity: 0;
-  transition-property: opacity, transform;
-  transition-duration: 0.9s;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-up {
-  transform: translateY(50px);
-}
-
-.reveal-down {
-  transform: translateY(-40px);
-}
-
-.reveal-left {
-  transform: translateX(-70px);
-}
-
-.reveal-right {
-  transform: translateX(70px);
-}
-
-.reveal-scale {
-  transform: scale(0.92);
-}
-
-/* Delays escalonados para montagem suave */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }
-.delay-6 { transition-delay: 0.6s; }
-
-/* Estado final visível */
-.scroll-reveal.is-visible,
-.scroll-reveal.is-revealed,
-.scroll-reveal[data-revealed="true"] {
   opacity: 1 !important;
-  transform: translate(0, 0) scale(1) !important;
+  transform: none !important;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  transform: none !important;
 }
 

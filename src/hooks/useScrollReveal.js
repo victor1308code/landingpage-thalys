@@ -1,42 +1,16 @@
 import { useEffect } from 'react';
 
 /**
- * Custom hook to trigger scroll animations using IntersectionObserver.
- * Sets data-revealed="true" so React re-renders never revert visibility.
+ * Scroll reveal hook that ensures all elements remain visible.
  */
 export function useScrollReveal() {
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
-    };
-
-    const handleIntersect = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.setAttribute('data-revealed', 'true');
-          entry.target.classList.add('is-revealed');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    // Ensure all elements have full visibility
     const elements = document.querySelectorAll('.scroll-reveal');
-
-    elements.forEach((el) => observer.observe(el));
-
-    // Ensure all already revealed elements stay visible
-    const mutationObserver = new MutationObserver(() => {
-      const allRevealed = document.querySelectorAll('[data-revealed="true"]');
-      allRevealed.forEach(el => el.classList.add('is-revealed'));
+    elements.forEach((el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.classList.add('is-visible');
     });
-
-    mutationObserver.observe(document.body, { childList: true, subtree: true, attributes: true });
-
-    return () => {
-      observer.disconnect();
-      mutationObserver.disconnect();
-    };
   }, []);
 }
