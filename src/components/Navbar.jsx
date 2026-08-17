@@ -56,7 +56,7 @@ export default function Navbar() {
             />
             <div className="logo-text">
               <span className="logo-title">DR. THALYS LAYBER</span>
-              <span className="logo-subtitle">MÉDICO • CRM-RJ 1300210</span>
+              <span className="logo-subtitle">CLÍNICO GERAL • CRM-RJ 1300210</span>
             </div>
           </a>
 

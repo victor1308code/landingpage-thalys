@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Shield, Mail, ArrowRight } from 'lucide-react';
+import { MessageSquare, Shield, Mail, ArrowRight, Video, FileCheck, Award } from 'lucide-react';
 import doctorTransparent from '../assets/images/doctor-hero-transparent.png';
 import logoEmblem from '../assets/images/logo-emblem-clean.png';
 import './Hero.css';
@@ -30,39 +30,39 @@ export default function Hero() {
               <div className="hero-name-block">
                 <div className="hero-crm-badge">
                   <Shield size={14} className="badge-shield-icon" />
-                  <span>CRM-RJ 1300210</span>
+                  <span>MÉDICO CLÍNICO • CRM-RJ 1300210</span>
                 </div>
                 <h1 className="hero-doctor-name">DR. THALYS LAYBER</h1>
                 <span className="hero-title-sub">
-                  Medicina com <span className="text-gold-gradient">Excelência</span> e Cuidado Humanizado
+                  Telemedicina com <span className="text-gold-gradient">Excelência</span> e Cuidado Humanizado
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Subtitle & Highlights (Animation: Left entrance, delay 0.6s) */}
+          {/* Subtitle & Highlights (Animation: Left entrance, delay 0.5s) */}
           <div className="hero-anim-subtitle">
             <p className="hero-description">
-              Consultas médicas individualizadas focadas na sua saúde integral, prevenção e qualidade de vida. Atendimento particular de clínico geral no Rio de Janeiro e Telemedicina para todo o Brasil.
+              Consultas médicas online completas e individualizadas no conforto da sua casa, para pacientes de todo o Brasil. Avaliação minuciosa, escuta atenta, check-up preventivo e prescrição digital com validade nacional.
             </p>
             
             <div className="hero-features">
               <div className="feature-item">
-                <span className="bullet"></span>
-                <span>Atendimento Particular</span>
+                <Video size={16} className="feature-gold-icon" />
+                <span>100% Teleconsulta Nacional</span>
               </div>
               <div className="feature-item">
-                <span className="bullet"></span>
-                <span>Avaliação Integral</span>
+                <FileCheck size={16} className="feature-gold-icon" />
+                <span>Receituário & Atestado Digital</span>
               </div>
               <div className="feature-item">
-                <span className="bullet"></span>
-                <span>Foco em Longevidade</span>
+                <Award size={16} className="feature-gold-icon" />
+                <span>Residência Clínica Médica UNIRIO</span>
               </div>
             </div>
           </div>
 
-          {/* Action Buttons & Social Channels (Animation: Bottom-Up entrance, delay 0.8s) */}
+          {/* Action Buttons & Social Channels (Animation: Bottom-Up entrance, delay 0.7s) */}
           <div className="hero-anim-cta">
             <div className="hero-cta-group">
               <a 
@@ -73,10 +73,10 @@ export default function Hero() {
                 id="hero-btn-agendar"
               >
                 <MessageSquare size={20} />
-                Agendar Consulta
+                Agendar Teleconsulta
               </a>
               <a href="#sobre" className="btn btn-hero-secondary" id="hero-btn-sobre">
-                Conhecer o Médico
+                Conhecer a Trajetória
                 <ArrowRight size={18} />
               </a>
             </div>
@@ -90,18 +90,18 @@ export default function Hero() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="social-icon-btn whatsapp" 
-                  aria-label="WhatsApp Dr. Thalys"
+                  aria-label="WhatsApp direto do Dr. Thalys"
                   title="Falar no WhatsApp"
                 >
                   <MessageSquare size={18} />
                 </a>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://instagram.com/thalyslayber" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="social-icon-btn instagram" 
-                  aria-label="Instagram Dr. Thalys"
-                  title="Instagram"
+                  aria-label="Instagram @thalyslayber"
+                  title="Instagram @thalyslayber"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>

@@ -7,20 +7,24 @@ export default function FAQ() {
 
   const faqData = [
     {
-      question: "Como funciona a consulta com Clínico Geral?",
-      answer: "A consulta é um momento de escuta detalhada. O clínico geral avalia seu histórico familiar, queixas atuais, hábitos, sono e saúde mental. Realiza-se um exame físico minucioso e, a partir disso, são traçados planos de investigação laboratorial, tratamento ou prevenção personalizada."
+      question: "Como funciona a teleconsulta médica online com o Dr. Thalys?",
+      answer: "A teleconsulta é realizada através de uma plataforma segura e confidencial em vídeo. No dia e horário agendados, você acessa o link enviado diretamente no seu WhatsApp ou e-mail. A consulta dura o tempo necessário para uma escuta atenta, detalhamento do seu histórico, análise de queixas e elaboração do plano diagnóstico ou de tratamento."
     },
     {
-      question: "O Dr. Thalys aceita convênios ou planos de saúde?",
-      answer: "O atendimento é exclusivamente particular. Isso garante tempo adequado de consulta para um acolhimento profundo. Fornecemos nota fiscal detalhada e relatório médico para que você solicite o reembolso (integral ou parcial) junto ao seu plano de saúde."
+      question: "As receitas médicas, atestados e pedidos de exames digitais são aceitos em todo o Brasil?",
+      answer: "Sim! Todos os documentos médicos emitidos pelo Dr. Thalys contam com assinatura digital certificada pelo padrão ICP-Brasil (com QR Code de validação). Eles têm validade jurídica plena e são aceitos em qualquer farmácia (inclusive para medicamentos de controle especial), laboratório de análises clínicas e operadora de saúde em todo o território nacional."
     },
     {
-      question: "Como funciona a solicitação de reembolso?",
-      answer: "Após a consulta, emitimos a nota fiscal do serviço médico. Você envia essa nota e, se necessário, o relatório médico que fornecemos pelo aplicativo do seu convênio. O plano de saúde realiza o reembolso direto na sua conta, conforme as normas do seu plano."
+      question: "O Dr. Thalys aceita convênios ou planos de saúde? Como funciona o reembolso?",
+      answer: "Os atendimentos são exclusivamente particulares, o que garante tempo dedicado e sem pressa para cada paciente. Após a teleconsulta, fornecemos a nota fiscal do serviço médico e o relatório clínico necessário para que você solicite o reembolso (integral ou parcial) direto no aplicativo do seu convênio/plano de saúde com facilidade."
     },
     {
-      question: "O que preciso levar para a primeira consulta?",
-      answer: "Recomendamos levar seus exames de sangue ou de imagem mais recentes (feitos nos últimos 6 meses) e uma lista com os medicamentos e suplementos que toma continuamente com as respectivas dosagens."
+      question: "Quais queixas ou sintomas posso avaliar por teleconsulta?",
+      answer: "A telemedicina em Clínica Médica é indicada para check-up preventivo, interpretação minuciosa de exames de sangue e imagem, investigação de fadiga, dores de cabeça ou abdominais, palpitações, febre, sintomas respiratórios, controle contínuo de pressão alta, diabetes, colesterol e avaliação de risco cirúrgico pré-operatório."
+    },
+    {
+      question: "O que preciso preparar para a minha teleconsulta?",
+      answer: "Recomendamos estar em um ambiente silencioso com boa conexão de internet. Tenha em mãos seus exames mais recentes (feitos nos últimos 6 a 12 meses) e uma lista com as medicações e suplementos de uso contínuo com as dosagens."
     }
   ];
 
@@ -31,10 +35,11 @@ export default function FAQ() {
   return (
     <section id="faq" className="faq-section">
       <div className="container">
+        
         <div className="section-header scroll-reveal reveal-down">
           <span>FAQ</span>
-          <h2>Dúvidas Frequentes</h2>
-          <p>Encontre respostas rápidas para as principais dúvidas sobre consultas, exames e agendamentos.</p>
+          <h2>Dúvidas Frequentes sobre Telemedicina</h2>
+          <p>Tudo o que você precisa saber sobre as consultas online, emissão de documentos digitais e reembolso.</p>
         </div>
 
         <div className="faq-list">
@@ -60,6 +65,7 @@ export default function FAQ() {
             );
           })}
         </div>
+
       </div>
     </section>
   );

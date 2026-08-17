@@ -1,38 +1,48 @@
 import React from 'react';
-import { HeartPulse, Activity, Stethoscope, Sparkles, ClipboardCheck, ArrowRightLeft } from 'lucide-react';
+import { HeartPulse, Activity, Stethoscope, Zap, Search, Thermometer, ShieldAlert, FileSpreadsheet, CheckCircle2 } from 'lucide-react';
 import './Servicos.css';
 
 export default function Servicos() {
   const servicosData = [
     {
       icon: <HeartPulse className="servico-icon" />,
-      title: "Consulta Médica & Check-up",
-      description: "Avaliação global do seu estado de saúde, exames preventivos, anamnese minuciosa e solicitação orientada de exames laboratoriais."
+      title: "Check-up Geral & Prevenção",
+      description: "Avaliação abrangente do estado de saúde geral, mapeamento de histórico familiar, hábitos de vida e solicitação direcionada de exames laboratoriais."
     },
     {
-      icon: <Activity className="servico-icon" />,
-      title: "Manejo de Doenças Crônicas",
-      description: "Acompanhamento dedicado e contínuo para controle da hipertensão arterial, diabetes, colesterol elevado, entre outros quadros."
+      icon: <Search className="servico-icon" />,
+      title: "Alterações em Exames de Sangue",
+      description: "Interpretação e conduta médica detalhada para alterações de colesterol, triglicerídeos, glicose, tireoide, anemia, vitaminas e ácido úrico."
+    },
+    {
+      icon: <Zap className="servico-icon" />,
+      title: "Cansaço Excessivo & Fadiga",
+      description: "Investigação minuciosa das causas de esgotamento físico, sono não reparador, estresse crônico, deficiências nutricionais e alterações hormonais."
     },
     {
       icon: <Stethoscope className="servico-icon" />,
-      title: "Sintomas Agudos & Queixas",
-      description: "Diagnóstico e tratamento rápido de infecções respiratórias, quadros de dor, desconforto intestinal, cansaço inexplicável e estresse."
+      title: "Dores Abdominais & Queixas Digestivas",
+      description: "Diagnóstico e plano terapêutico para dores estomacais, refluxo, queimação, alterações no hábito intestinal e desconfortos abdominais."
     },
     {
-      icon: <Sparkles className="servico-icon" />,
-      title: "Longevidade & Bem-estar",
-      description: "Direcionamento focado em hábitos de vida saudáveis, qualidade de sono, reeducação alimentar leve e promoção de vitalidade."
+      icon: <Activity className="servico-icon" />,
+      title: "Palpitações, Tonturas & Pressão",
+      description: "Avaliação inicial de episódios de tontura, vertigem, sensação de coração acelerado e controle rigoroso da pressão arterial."
     },
     {
-      icon: <ClipboardCheck className="servico-icon" />,
-      title: "Avaliação Pré-Operatória",
-      description: "Realização do Risco Cirúrgico essencial, assegurando total estabilidade clínica antes de qualquer procedimento sob anestesia."
+      icon: <Thermometer className="servico-icon" />,
+      title: "Febre Persistente & Infecções",
+      description: "Investigação de febre de origem obscura, infecções respiratórias, quadros virais, infecções urinárias e sintomas agudos gerais."
     },
     {
-      icon: <ArrowRightLeft className="servico-icon" />,
-      title: "Cuidado Integrado",
-      description: "Coordenação central dos seus cuidados de saúde, com encaminhamento preciso para subespecialidades quando estritamente necessário."
+      icon: <ShieldAlert className="servico-icon" />,
+      title: "Controle de Doenças Crônicas",
+      description: "Acompanhamento longitudinal de pacientes com Hipertensão Arterial, Diabetes Mellitus, esteatose hepática e síndrome metabólica."
+    },
+    {
+      icon: <FileSpreadsheet className="servico-icon" />,
+      title: "Avaliação de Risco Cirúrgico",
+      description: "Avaliação clínica pré-operatória criteriosa e emissão de laudo de risco cirúrgico para procedimentos eletivos com segurança."
     }
   ];
 
@@ -40,16 +50,16 @@ export default function Servicos() {
     <section id="servicos" className="servicos-section">
       <div className="container">
         <div className="section-header scroll-reveal reveal-down">
-          <span>O QUE FAZEMOS</span>
-          <h2>Especialidades & Atendimento</h2>
-          <p>Oferecemos suporte médico especializado em clínica médica, focado em todas as fases da sua saúde.</p>
+          <span>O QUE ATENDEMOS</span>
+          <h2>Sintomas, Queixas & Condições Clínicas</h2>
+          <p>Atendimento médico especializado em clínica médica através de teleconsulta individualizada para todo o Brasil.</p>
         </div>
 
         <div className="servicos-grid">
           {servicosData.map((servico, index) => (
             <div 
               key={index} 
-              className={`servico-card scroll-reveal reveal-up delay-${(index % 3) + 1}`}
+              className={`servico-card scroll-reveal reveal-up delay-${(index % 4) + 1}`}
             >
               <div className="servico-icon-container">
                 {servico.icon}
@@ -60,10 +70,17 @@ export default function Servicos() {
           ))}
         </div>
 
-        <div className="particular-alert scroll-reveal reveal-up delay-3">
-          <p>
-            <strong>Aviso Importante:</strong> Todos os atendimentos são realizados na modalidade <strong>particular</strong>, emitindo nota fiscal e documentação médica necessária para solicitação de reembolso junto ao seu convênio/plano de saúde.
-          </p>
+        {/* Banner de Destaque da Telemedicina & Reembolso */}
+        <div className="telemedicina-highlight-banner scroll-reveal reveal-up delay-3">
+          <div className="telemed-icon-wrapper">
+            <CheckCircle2 size={32} className="telemed-gold-icon" />
+          </div>
+          <div className="telemed-text-wrapper">
+            <h4>100% Teleconsulta com Validade Nacional & Reembolso</h4>
+            <p>
+              Receitas de medicamentos (incluindo controlados), atestados e pedidos de exames com <strong>assinatura digital ICP-Brasil</strong> aceitos em todo o território nacional. Atendimento particular com emissão de nota fiscal e relatório para você solicitar reembolso no seu plano de saúde.
+            </p>
+          </div>
         </div>
       </div>
     </section>
