@@ -12,10 +12,8 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="hero-section">
-      {/* Background ambient lighting effects */}
+      {/* Background ambient lighting overlay */}
       <div className="hero-bg-overlay"></div>
-      <div className="hero-glow-gold"></div>
-      <div className="hero-glow-blue"></div>
 
       <div className="container hero-container">
         <div className="hero-content">
