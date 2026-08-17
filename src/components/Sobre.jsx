@@ -1,6 +1,6 @@
 import React from 'react';
-import { GraduationCap, HeartHandshake, ShieldCheck, Stethoscope, Building2, Trophy, Activity } from 'lucide-react';
-import doctorPhoto from '../assets/images/doctor-about-photo.jpg';
+import { GraduationCap, HeartHandshake, ShieldCheck, Stethoscope, Building2, Trophy, Activity, Award, CheckCircle } from 'lucide-react';
+import doctorAboutCutout from '../assets/images/doctor-about-clean-cutout.png';
 import logoEmblem from '../assets/images/logo-emblem-clean.png';
 import './Sobre.css';
 
@@ -13,24 +13,36 @@ export default function Sobre() {
 
       <div className="container sobre-container">
         
-        {/* Left Column: Genuine Doctor Photo with Floating Luxury Badges */}
+        {/* Left Column: Transparent Cutout Doctor Portrait with Luxury Glass Accents */}
         <div className="sobre-image-column scroll-reveal reveal-left">
-          <div className="sobre-image-frame">
-            <div className="frame-border-accent"></div>
+          <div className="sobre-cutout-wrapper">
+            
+            {/* Elegant glowing background aura / arch */}
+            <div className="sobre-backdrop-arch"></div>
+            <div className="sobre-glow-radial"></div>
+
+            {/* Doctor Transparent Cutout Photo */}
             <img 
-              src={doctorPhoto} 
+              src={doctorAboutCutout} 
               alt="Dr. Thalys Carvalho Layber - Médico Clínico Geral" 
-              className="sobre-image"
+              className="sobre-cutout-image"
             />
             
+            {/* Floating Luxury CRM & Specialist Badge */}
             <div className="sobre-experience-badge scroll-reveal reveal-scale delay-3">
               <div className="badge-icon-box">
                 <ShieldCheck size={22} className="badge-gold-icon" />
               </div>
               <div className="badge-text-box">
-                <span className="badge-num">CRM-RJ</span>
-                <span className="badge-txt">1300210</span>
+                <span className="badge-num">CRM-RJ 1300210</span>
+                <span className="badge-txt">MÉDICO CLÍNICO GERAL</span>
               </div>
+            </div>
+
+            {/* Floating UNIRIO Tag */}
+            <div className="sobre-floating-tag">
+              <Award size={16} className="tag-gold-icon" />
+              <span>Residência Médica UNIRIO</span>
             </div>
           </div>
 
@@ -47,7 +59,7 @@ export default function Sobre() {
               <Activity size={20} className="award-gold-icon" />
               <div>
                 <strong>Certificação ACLS</strong>
-                <p>Advanced Cardiovascular Life Support</p>
+                <p>Suporte Avançado Cardiovascular</p>
               </div>
             </div>
           </div>
