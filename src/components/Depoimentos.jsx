@@ -8,7 +8,7 @@ export default function Depoimentos() {
   const depoimentosData = [
     {
       stars: 5,
-      text: "A teleconsulta com o Dr. Thalys superou todas as expectativas. Muito pontual, atencioso e me ouviu com calma por quase uma hora. Explicou cada detalhe dos meus exames de sangue e já me enviou as receitas digitais na hora. Excelente médico!",
+      text: "A teleconsulta com o Dr. Thalys superou todas as expectativas. Muito pontual, atencioso e me ouviu com calma por quase uma hora. Explicou cada detalhe dos meus exames de sangue e das orientações médicas. Excelente profissional!",
       author: "Marcos Vinícius S.",
       info: "Teleconsulta • Check-up & Exames",
       platform: "Google Avaliações"

@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageSquare, Shield, Mail, ArrowRight, Video, HeartHandshake, Award } from 'lucide-react';
+import { Shield, Mail, ArrowRight, Video, HeartHandshake, Award } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import doctorTransparent from '../assets/images/doctor-hero-transparent.png';
 import logoEmblem from '../assets/images/logo-emblem-clean.png';
 import './Hero.css';
@@ -72,7 +73,7 @@ export default function Hero() {
                 className="btn btn-hero-primary"
                 id="hero-btn-agendar"
               >
-                <MessageSquare size={20} />
+                <WhatsAppIcon size={20} />
                 Agendar Teleconsulta
               </a>
               <a href="#sobre" className="btn btn-hero-secondary" id="hero-btn-sobre">
@@ -93,7 +94,7 @@ export default function Hero() {
                   aria-label="WhatsApp direto do Dr. Thalys"
                   title="Falar no WhatsApp"
                 >
-                  <MessageSquare size={18} />
+                  <WhatsAppIcon size={18} />
                 </a>
                 <a 
                   href="https://instagram.com/thalyslayber" 

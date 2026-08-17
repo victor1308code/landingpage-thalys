@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, MessageSquare, Send, CheckCircle2, Clock, FileText, Video } from 'lucide-react';
+import { Mail, Send, CheckCircle2, Clock, FileText, Video } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import './Contato.css';
 
 export default function Contato() {
@@ -48,7 +49,7 @@ export default function Contato() {
               
               <div className="info-card">
                 <div className="info-icon-wrapper">
-                  <MessageSquare className="info-icon" />
+                  <WhatsAppIcon size={24} className="info-icon" />
                 </div>
                 <div>
                   <h3>WhatsApp Direto</h3>
@@ -182,7 +183,7 @@ export default function Contato() {
                     Enviar Solicitação
                   </button>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-direct-whatsapp">
-                    <MessageSquare size={18} />
+                    <WhatsAppIcon size={19} />
                     WhatsApp Direto
                   </a>
                 </div>
