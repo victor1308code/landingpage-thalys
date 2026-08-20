@@ -63,19 +63,11 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
             type="button" 
             onClick={onBack} 
             className="artigo-back-btn"
-            aria-label="Voltar para a lista de artigos"
+            aria-label="Voltar para a página inicial"
           >
             <ArrowLeft size={18} />
-            <span>Voltar aos Artigos</span>
+            <span>Página Inicial</span>
           </button>
-
-          <nav className="artigo-breadcrumbs" aria-label="Navegação estrutural">
-            <span onClick={onBack} className="crumb-link">Início</span>
-            <ChevronRight size={14} className="crumb-sep" />
-            <span onClick={onBack} className="crumb-link">Blog</span>
-            <ChevronRight size={14} className="crumb-sep" />
-            <span className="crumb-current">{artigo.category}</span>
-          </nav>
 
           <button 
             type="button" 

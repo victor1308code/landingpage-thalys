@@ -80,36 +80,6 @@
   transform: translateX(-3px);
 }
 
-.artigo-breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-
-.crumb-link {
-  cursor: pointer;
-  transition: color var(--transition-fast);
-}
-
-.crumb-link:hover {
-  color: var(--color-accent-dark);
-  text-decoration: underline;
-}
-
-.crumb-sep {
-  color: #C0C8D2;
-}
-
-.crumb-current {
-  color: var(--color-primary);
-  font-weight: 600;
-  max-width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .artigo-share-btn {
   display: inline-flex;
