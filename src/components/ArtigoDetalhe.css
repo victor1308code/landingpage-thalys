@@ -6,7 +6,7 @@
   min-height: 100vh;
   background-color: #FAFCFE;
   color: var(--color-text-main);
-  padding-top: 100px;
+  padding-top: 115px;
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
@@ -38,26 +38,24 @@
 }
 
 /* ==========================================================================
-   1. BARRA SUPERIOR DE NAVEGAÇÃO & BREADCRUMBS
+   1. LINHA DE NAVEGAÇÃO SUPERIOR (INTEGRADA & SEM BARRA SOLTA)
    ========================================================================== */
 
-.artigo-header-bar {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
-  padding: 14px 0;
-  position: sticky;
-  top: 80px;
-  z-index: 40;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+.artigo-main-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
-.artigo-header-container {
+.artigo-nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .artigo-back-btn {
@@ -117,7 +115,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: transparent;
+  background: #FFFFFF;
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
   padding: 7px 14px;
@@ -126,6 +124,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
 }
 
 .artigo-share-btn:hover {
@@ -137,14 +136,6 @@
 /* ==========================================================================
    2. CABEÇALHO DO ARTIGO (TÍTULO, SUBTÍTULO E AUTOR)
    ========================================================================== */
-
-.artigo-main-container {
-  max-width: 860px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-  padding-top: 36px;
-}
 
 .artigo-title-block {
   margin-bottom: 40px;
@@ -671,7 +662,7 @@
 
 @media (max-width: 992px) {
   .artigo-breadcrumbs {
-    display: none; /* Simplifica o topo no mobile */
+    display: none;
   }
 
   .artigo-main-title {
@@ -711,7 +702,12 @@
 
 @media (max-width: 576px) {
   .artigo-detalhe-page {
-    padding-top: 80px;
+    padding-top: 95px;
+  }
+
+  .artigo-nav-row {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
   }
 
   .artigo-main-title {

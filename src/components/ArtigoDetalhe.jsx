@@ -54,9 +54,11 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
       <div className="artigo-bg-glow-gold"></div>
       <div className="artigo-bg-glow-blue"></div>
 
-      {/* Top Header / Breadcrumb Bar */}
-      <header className="artigo-header-bar">
-        <div className="container artigo-header-container">
+      {/* Main Article Content Container */}
+      <div className="container artigo-main-container">
+        
+        {/* Seamless Top Navigation Row */}
+        <div className="artigo-nav-row">
           <button 
             type="button" 
             onClick={onBack} 
@@ -85,11 +87,7 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
             <span>Compartilhar</span>
           </button>
         </div>
-      </header>
 
-      {/* Main Article Content Container */}
-      <div className="container artigo-main-container">
-        
         {/* Article Headline Header */}
         <div className="artigo-title-block">
           <div className="artigo-top-tags">
