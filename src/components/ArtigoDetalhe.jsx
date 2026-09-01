@@ -7,12 +7,9 @@ import {
   AlertTriangle, 
   Info, 
   Share2, 
-  ChevronRight,
-  Building2,
-  GraduationCap
+  ChevronRight
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
-import doctorPhoto from '../assets/images/doctor-about-clean-cutout.png';
 import logoEmblem from '../assets/images/logo-emblem-clean.png';
 import { artigosData } from '../data/artigosData';
 import './ArtigoDetalhe.css';
@@ -28,7 +25,7 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
   const whatsappMessage = encodeURIComponent(`Olá, Dr. Thalys! Li seu artigo sobre "${artigo.title}" e gostaria de agendar uma consulta.`);
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  // Filtrar outros 2 ou 3 artigos relacionados
+  // Filtrar outros artigos relacionados
   const relatedArtigos = artigosData
     .filter(a => a.slug !== artigo.slug)
     .slice(0, 3);
@@ -159,9 +156,9 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
                 <div className={`artigo-callout-box callout-${sec.callout.type}`}>
                   <div className="callout-header">
                     {sec.callout.type === 'warning' ? (
-                      <AlertTriangle size={22} className="callout-icon-warning" />
+                      <AlertTriangle size={20} className="callout-icon-warning" />
                     ) : (
-                      <Info size={22} className="callout-icon-info" />
+                      <Info size={20} className="callout-icon-info" />
                     )}
                     <strong>{sec.callout.title}</strong>
                   </div>
@@ -179,57 +176,6 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
               )}
             </section>
           ))}
-
-          {/* In-Article WhatsApp CTA Box */}
-          <div className="artigo-intext-cta">
-            <div className="cta-icon-aura">
-              <WhatsAppIcon size={32} />
-            </div>
-            <div className="cta-text-side">
-              <h3>{artigo.ctaText}</h3>
-              <p>Consultas online detalhadas, escuta atenta e conduta fundamentada em evidências científicas.</p>
-            </div>
-            <a 
-              href={whatsappLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn btn-artigo-whatsapp"
-            >
-              <WhatsAppIcon size={20} />
-              {artigo.ctaButton}
-            </a>
-          </div>
-
-          {/* Author Box / Card Final do Médico */}
-          <div className="artigo-author-box">
-            <div className="author-photo-column">
-              <img 
-                src={doctorPhoto} 
-                alt="Dr. Thalys Carvalho Layber" 
-                className="author-bio-photo"
-              />
-            </div>
-            <div className="author-bio-column">
-              <span className="author-box-label">SOBRE O AUTOR</span>
-              <h3 className="author-box-name">Dr. Thalys Carvalho Layber</h3>
-              <p className="author-box-role">
-                Médico Clínico Geral • CRM-RJ 1300210
-              </p>
-              <p className="author-box-desc">
-                Formado pela <strong>Faculdade de Ciências Médicas e da Saúde de Juiz de Fora (FCMS-JF / SUPREMA)</strong> e médico residente do 2º ano de Clínica Médica no <strong>Hospital Universitário Gaffrée e Guinle (UNIRIO)</strong>. Atua com medicina baseada em evidências, prevenção e acolhimento humanizado em telemedicina para todo o Brasil.
-              </p>
-              <div className="author-box-badges">
-                <span className="bio-pill">
-                  <Building2 size={14} />
-                  Residência Clínica Médica UNIRIO
-                </span>
-                <span className="bio-pill">
-                  <GraduationCap size={14} />
-                  1º Lugar em Pesquisa Científica
-                </span>
-              </div>
-            </div>
-          </div>
 
         </div>
 
