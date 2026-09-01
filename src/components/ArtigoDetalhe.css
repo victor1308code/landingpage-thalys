@@ -278,29 +278,31 @@
 }
 
 .artigo-body-section {
-  margin-bottom: 14px;
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
 }
 
 .artigo-section-heading {
   font-family: var(--font-heading);
-  font-size: 1.32rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin-top: 14px;
-  margin-bottom: 6px;
+  margin-top: 18px !important;
+  margin-bottom: 8px !important;
   line-height: 1.25;
 }
 
 .artigo-paragraph {
-  margin-top: 0;
-  margin-bottom: 8px;
-  line-height: 1.55;
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  line-height: 1.6;
 }
 
 .artigo-bullet-list {
   list-style: none;
-  padding: 0;
-  margin: 6px 0 10px 0;
+  padding: 0 !important;
+  margin: 8px 0 12px 0 !important;
   display: flex;
   flex-direction: column;
   gap: 6px;

@@ -130,9 +130,9 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
           {/* Lead Intro Paragraph */}
           <p className="artigo-lead-text">{artigo.intro}</p>
 
-          {/* Dynamic Sections */}
+          {/* Dynamic Sections as div to prevent global section 100px padding */}
           {artigo.sections.map((sec, sIdx) => (
-            <section key={sIdx} className="artigo-body-section">
+            <div key={sIdx} className="artigo-body-section">
               <h2 className="artigo-section-heading">{sec.heading}</h2>
               
               {sec.paragraphs && sec.paragraphs.map((p, pIdx) => (
@@ -174,13 +174,13 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
                   )}
                 </div>
               )}
-            </section>
+            </div>
           ))}
 
         </div>
 
         {/* Related Articles Section */}
-        <section className="artigo-related-section">
+        <div className="artigo-related-section">
           <div className="related-header">
             <span className="related-tag">CONTINUE LENDO</span>
             <h2 className="related-title">Artigos Recomendados</h2>
@@ -218,7 +218,7 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
       </div>
 
