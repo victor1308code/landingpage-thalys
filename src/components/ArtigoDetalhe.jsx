@@ -3,13 +3,11 @@ import {
   ArrowLeft, 
   Clock, 
   Calendar, 
-  ShieldCheck, 
   CheckCircle2, 
   AlertTriangle, 
   Info, 
   Share2, 
   ChevronRight,
-  Stethoscope,
   Building2,
   GraduationCap
 } from 'lucide-react';
@@ -30,7 +28,7 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
   const whatsappMessage = encodeURIComponent(`Olá, Dr. Thalys! Li seu artigo sobre "${artigo.title}" e gostaria de agendar uma consulta.`);
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  // Filtrar outros 2 artigos relacionados
+  // Filtrar outros 2 ou 3 artigos relacionados
   const relatedArtigos = artigosData
     .filter(a => a.slug !== artigo.slug)
     .slice(0, 3);
@@ -116,6 +114,17 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
               <span>{artigo.date}</span>
             </div>
           </div>
+
+          {/* Article Cover Hero Banner */}
+          {artigo.image && (
+            <div className="artigo-hero-banner">
+              <img 
+                src={artigo.image} 
+                alt={artigo.title} 
+                className="artigo-banner-img"
+              />
+            </div>
+          )}
         </div>
 
         {/* Article Body Content */}
@@ -238,15 +247,27 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
                 className="related-card"
                 onClick={() => onSelectArtigo(relArtigo.slug)}
               >
-                <span className="related-card-category">{relArtigo.category}</span>
-                <h3 className="related-card-title">{relArtigo.title}</h3>
-                <p className="related-card-summary">{relArtigo.summary}</p>
-                <div className="related-card-footer">
-                  <span className="related-card-link">
-                    Ler Artigo Completo
-                    <ChevronRight size={16} />
-                  </span>
-                  <span className="related-read-time">{relArtigo.readTime}</span>
+                {relArtigo.image && (
+                  <div className="related-card-cover">
+                    <img 
+                      src={relArtigo.image} 
+                      alt={relArtigo.title} 
+                      className="related-cover-img"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div className="related-card-body">
+                  <span className="related-card-category">{relArtigo.category}</span>
+                  <h3 className="related-card-title">{relArtigo.title}</h3>
+                  <p className="related-card-summary">{relArtigo.summary}</p>
+                  <div className="related-card-footer">
+                    <span className="related-card-link">
+                      Ler Artigo Completo
+                      <ChevronRight size={16} />
+                    </span>
+                    <span className="related-read-time">{relArtigo.readTime}</span>
+                  </div>
                 </div>
               </div>
             ))}

@@ -2,6 +2,13 @@
 // BASE DE DADOS DE ARTIGOS CLÍNICOS - DR. THALYS LAYBER
 // ==============================================================================
 
+import imgPalpitacao from '../assets/images/artigos/palpitacao.jpg';
+import imgAnsiedade from '../assets/images/artigos/ansiedade.jpg';
+import imgSonoFadiga from '../assets/images/artigos/sono-fadiga.jpg';
+import imgDisturbiosSono from '../assets/images/artigos/disturbios-sono.jpg';
+import imgGastro from '../assets/images/artigos/gastroenterologia.jpg';
+import imgPrevencaoIsts from '../assets/images/artigos/prevencao-ists.jpg';
+
 export const artigosData = [
   {
     id: "palpitacao-quando-investigar",
@@ -11,6 +18,7 @@ export const artigosData = [
     subtitle: "Entenda o que são as palpitações, as causas mais comuns e quando elas indicam a necessidade de uma avaliação médica detalhada.",
     readTime: "4 min de leitura",
     date: "Atualizado em Fevereiro de 2026",
+    image: imgPalpitacao,
     summary: "A palpitação é a sensação de perceber os batimentos do próprio coração, que podem parecer acelerados, fortes ou irregulares. Em muitos casos pode ocorrer por ansiedade ou cafeína, mas quando frequente exige avaliação médica.",
     intro: "A palpitação é a sensação incômoda ou atípica de perceber os batimentos do próprio coração. Ela pode se manifestar como se o coração estivesse disparado, dando 'pulos', batendo com mais força no peito ou até mesmo com sensação de batimentos na garganta ou no pescoço.",
     sections: [
@@ -66,6 +74,7 @@ export const artigosData = [
     subtitle: "Aprenda a diferenciar a ansiedade normal do dia a dia do transtorno de ansiedade que compromete a saúde física e mental.",
     readTime: "5 min de leitura",
     date: "Atualizado em Fevereiro de 2026",
+    image: imgAnsiedade,
     summary: "A ansiedade é uma reação natural do organismo, mas quando persistente e interferindo na rotina com sintomas físicos como taquicardia e insônia, deve ser avaliada clinicamente.",
     intro: "Sentir ansiedade antes de uma prova, uma entrevista de emprego ou uma decisão importante é uma reação natural e protetora do organismo. No entanto, quando a preocupação se torna constante, desproporcional e começa a afetar o sono, o trabalho e as relações pessoais, estamos diante de um quadro que requer acolhimento e avaliação clínica.",
     sections: [
@@ -118,6 +127,7 @@ export const artigosData = [
     subtitle: "Dormir várias horas e acordar com a sensação de cansaço extremo não é normal. Conheça as principais causas da fadiga crônica.",
     readTime: "4 min de leitura",
     date: "Atualizado em Fevereiro de 2026",
+    image: imgSonoFadiga,
     summary: "O sono não reparador ocorre quando a pessoa acorda com sensação de cansaço constante. Quando essa fadiga diurna se torna frequente, uma investigação clínica é essencial.",
     intro: "Você dorme 7, 8 ou até 9 horas por noite, mas acorda com a sensação de que não descansou nada? O sono não reparador é uma queixa muito frequente na prática clínica e indica que, embora haja tempo de cama, a arquitetura e as fases profundas do sono estão sendo prejudicadas.",
     sections: [
@@ -169,6 +179,7 @@ export const artigosData = [
     subtitle: "Da insônia ao ronco excessivo: descubra quando as dificuldades para dormir exigem diagnóstico e tratamento clínico.",
     readTime: "4 min de leitura",
     date: "Atualizado em Fevereiro de 2026",
+    image: imgDisturbiosSono,
     summary: "Dificuldade para adormecer ou despertares frequentes impactam diretamente a memória, a concentração e a imunidade. Entenda quando investigar clinicamente.",
     intro: "Uma boa noite de sono é um dos três pilares fundamentais da saúde humana, ao lado da alimentação e da atividade física. Quando o sono falha sistematicamente, todo o equilíbrio fisiológico entra em colapso.",
     sections: [
@@ -219,6 +230,7 @@ export const artigosData = [
     subtitle: "Entenda o que as cores do sangramento indicam e por que esse sinal nunca deve ser ignorado ou normalizado.",
     readTime: "5 min de leitura",
     date: "Atualizado em Fevereiro de 2026",
+    image: imgGastro,
     summary: "A presença de sangramento intestinal sempre merece atenção médica cuidadosa para diferenciar causas comuns de outras condições do trato digestivo.",
     intro: "Notar sangue nas fezes ou no papel higiênico é uma situação que assusta muitos pacientes. Embora em grande parte das vezes esteja associado a condições orificiais comuns e benignas, o sangramento digestivo é um sinal de alerta que sempre deve ser avaliado por um médico.",
     sections: [
@@ -276,6 +288,7 @@ export const artigosData = [
     subtitle: "Muitas infecções evoluem sem sintomas evidentes. Entenda a importância do rastreio laboratorial e do diagnóstico precoce.",
     readTime: "5 min de leitura",
     date: "Atualizado em Fevereiro de 2026",
+    image: imgPrevencaoIsts,
     summary: "Muitas ISTs podem evoluir de forma silenciosa e sem sintomas na fase inicial. A testagem preventiva e a avaliação médica periódica são indispensáveis.",
     intro: "As Infecções Sexualmente Transmissíveis (ISTs) são condições causadas por vírus, bactérias e outros microrganismos transmitidos principalmente por via sexual desprotegida. Um dos maiores desafios da medicina moderna é que uma parcela expressiva das pessoas infectadas não apresenta nenhum sintoma nas fases iniciais.",
     sections: [

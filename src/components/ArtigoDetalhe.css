@@ -232,6 +232,27 @@
   flex-shrink: 0;
 }
 
+/* Banner Hero Ilustrado do Artigo */
+.artigo-hero-banner {
+  width: 100%;
+  max-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 28px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 30px -5px rgba(10, 28, 54, 0.1);
+  background-color: #071426;
+}
+
+.artigo-banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* ==========================================================================
    3. CORPO DE TEXTO DO ARTIGO (LEITURA CONFORTÁVEL & RICA)
    ========================================================================== */
@@ -555,7 +576,7 @@
   background: #FFFFFF;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -564,13 +585,40 @@
 }
 
 .related-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--color-accent);
   box-shadow: var(--shadow-md);
 }
 
+.related-card-cover {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background-color: #071426;
+}
+
+.related-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.related-card:hover .related-cover-img {
+  transform: scale(1.06);
+}
+
+.related-card-body {
+  padding: 18px 20px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .related-card-category {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--color-accent-dark);

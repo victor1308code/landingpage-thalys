@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SEÇÃO ARTIGOS & CONDIÇÕES CLÍNICAS (LANDING PAGE GRID)
+   SEÇÃO ARTIGOS & CONDIÇÕES CLÍNICAS (LANDING PAGE GRID COM CAPAS)
    ========================================================================== */
 
 .artigos-section {
@@ -12,89 +12,114 @@
 .artigos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-top: 48px;
+  gap: 30px;
+  margin-top: 50px;
   align-items: stretch;
 }
 
 /* Card Individual de Artigo */
 .artigo-card {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-bg-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
 }
 
 .artigo-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: var(--color-accent);
-  box-shadow: 0 16px 32px rgba(10, 28, 54, 0.08);
-  background-color: #FFFFFF;
+  box-shadow: 0 20px 40px -10px rgba(10, 28, 54, 0.12);
 }
 
-/* Topo do Card com Ícone e Tempo de Leitura */
-.artigo-card-top {
+/* Capa da Imagem */
+.artigo-card-cover {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #071426;
+}
+
+.artigo-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.artigo-card:hover .artigo-cover-img {
+  transform: scale(1.08);
+}
+
+.artigo-cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(7, 20, 38, 0.15) 0%, rgba(7, 20, 38, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* Badges sobre a Imagem de Capa */
+.artigo-cover-badges {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  gap: 10px;
+  z-index: 2;
 }
 
-.artigo-icon-badge {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  background: rgba(10, 28, 54, 0.06);
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-fast);
+.artigo-category-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background: rgba(7, 20, 38, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(197, 168, 98, 0.4);
 }
 
-.artigo-card:hover .artigo-icon-badge {
-  background: #071426;
-  color: var(--color-accent-hover);
-  transform: scale(1.05);
-}
-
-.card-category-icon {
-  flex-shrink: 0;
-}
-
-.artigo-read-time-pill {
+.artigo-read-pill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.76rem;
-  color: var(--color-text-muted);
-  background: rgba(0, 0, 0, 0.04);
-  padding: 4px 10px;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 8px;
   border-radius: var(--radius-full);
 }
 
-.artigo-meta {
-  margin-bottom: 10px;
-}
-
-.artigo-category {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--color-accent-dark);
-  text-transform: uppercase;
+/* Conteúdo do Card */
+.artigo-card-content {
+  padding: 24px 22px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .artigo-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1.35;
@@ -107,13 +132,13 @@
 }
 
 .artigo-summary-text {
-  font-size: 0.92rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: var(--color-text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   flex-grow: 1;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -124,7 +149,7 @@
   justify-content: space-between;
   margin-top: auto;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
-  padding-top: 16px;
+  padding-top: 14px;
 }
 
 .artigo-saiba-mais-btn {
@@ -135,7 +160,7 @@
   gap: 8px;
   color: var(--color-primary);
   font-family: var(--font-body);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
   padding: 4px 0;
@@ -164,10 +189,14 @@
 @media (max-width: 768px) {
   .artigos-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
 
   .artigos-section {
     padding: 75px 0;
+  }
+
+  .artigo-card-cover {
+    height: 180px;
   }
 }
