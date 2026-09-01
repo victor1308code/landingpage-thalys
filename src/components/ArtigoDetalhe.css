@@ -262,8 +262,11 @@
 
 .artigo-content-body {
   font-size: 1.02rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: #2D3A4B;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .artigo-lead-text {
@@ -271,50 +274,48 @@
   font-weight: 500;
   color: var(--color-primary);
   line-height: 1.55;
-  margin-top: 0;
-  margin-bottom: 12px;
+  margin: 0 0 10px 0 !important;
   border-left: 3.5px solid var(--color-accent);
-  padding-left: 14px;
+  padding: 4px 0 4px 14px !important;
 }
 
 .artigo-body-section {
   padding: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 18px !important;
+  margin: 0 0 12px 0 !important;
 }
 
 .artigo-section-heading {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin-top: 18px !important;
-  margin-bottom: 8px !important;
+  margin: 12px 0 6px 0 !important;
   line-height: 1.25;
 }
 
 .artigo-paragraph {
-  margin-top: 0 !important;
-  margin-bottom: 10px !important;
-  line-height: 1.6;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.55;
 }
 
 .artigo-bullet-list {
   list-style: none;
   padding: 0 !important;
-  margin: 8px 0 12px 0 !important;
+  margin: 6px 0 8px 0 !important;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px !important;
 }
 
 .artigo-bullet-list li {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 0.98rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.4;
   color: #334155;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .list-check-icon {

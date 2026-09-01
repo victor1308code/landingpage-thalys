@@ -152,13 +152,13 @@ img {
 }
 
 /* Estilos de Seção */
-section {
+section:not(.artigo-detalhe-page, .artigo-detalhe-page *) {
   padding: 100px 0;
   position: relative;
 }
 
 @media (max-width: 768px) {
-  section {
+  section:not(.artigo-detalhe-page, .artigo-detalhe-page *) {
     padding: 60px 0;
   }
 }
