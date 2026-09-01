@@ -43,30 +43,29 @@
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background-color: #071426;
+  background-color: #FAFCFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(10, 28, 54, 0.06);
 }
 
 .artigo-cover-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 10px;
   object-position: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   display: block;
 }
 
 .artigo-card:hover .artigo-cover-img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .artigo-cover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(7, 20, 38, 0.15) 0%, rgba(7, 20, 38, 0.65) 100%);
-  pointer-events: none;
+  display: none;
 }
 
 /* Badges sobre a Imagem de Capa */

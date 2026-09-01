@@ -235,20 +235,24 @@
 /* Banner Hero Ilustrado do Artigo */
 .artigo-hero-banner {
   width: 100%;
-  max-height: 420px;
+  max-height: 380px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   margin-top: 28px;
   border: 1px solid var(--color-border);
-  box-shadow: 0 12px 30px -5px rgba(10, 28, 54, 0.1);
-  background-color: #071426;
+  box-shadow: 0 8px 24px -5px rgba(10, 28, 54, 0.06);
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 .artigo-banner-img {
   width: 100%;
   height: auto;
-  max-height: 420px;
-  object-fit: cover;
+  max-height: 340px;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -594,13 +598,18 @@
   width: 100%;
   height: 140px;
   overflow: hidden;
-  background-color: #071426;
+  background-color: #FAFCFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(10, 28, 54, 0.05);
 }
 
 .related-cover-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 8px;
   object-position: center;
   transition: transform 0.5s ease;
   display: block;
