@@ -254,6 +254,26 @@ export default function ArtigoDetalhe({ slug, onBack, onSelectArtigo }) {
         </section>
 
       </div>
+
+      {/* Botão Fixo de Agendamento no WhatsApp (Acompanha o Scroll) */}
+      <aside className="artigo-floating-cta-wrapper" aria-label="Ação rápida de agendamento no WhatsApp">
+        <a 
+          href={whatsappLink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="artigo-floating-cta-btn"
+          title="Agende sua consulta no WhatsApp com o Dr. Thalys"
+        >
+          <div className="floating-cta-icon-box">
+            <WhatsAppIcon size={24} />
+            <span className="floating-cta-pulse"></span>
+          </div>
+          <div className="floating-cta-text-box">
+            <span className="floating-cta-sub">Atendimento Online</span>
+            <strong className="floating-cta-main">Agende sua Consulta no WhatsApp</strong>
+          </div>
+        </a>
+      </aside>
     </article>
   );
 }
