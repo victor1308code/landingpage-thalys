@@ -69,9 +69,9 @@ function App() {
           <>
             <Hero />
             <Sobre />
+            <Artigos onSelectArtigo={handleSelectArtigo} />
             <Servicos />
             <Depoimentos />
-            <Artigos onSelectArtigo={handleSelectArtigo} />
             <Contato />
           </>
         )}

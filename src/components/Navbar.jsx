@@ -16,7 +16,7 @@ export default function Navbar() {
         setScrolled(false);
       }
 
-      const sections = ['inicio', 'sobre', 'servicos', 'artigos', 'contato'];
+      const sections = ['inicio', 'sobre', 'artigos', 'servicos', 'contato'];
       const scrollPosition = window.scrollY + 200;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -80,18 +80,18 @@ export default function Navbar() {
             </li>
             <li>
               <a 
-                href="#servicos" 
-                className={activeSection === 'servicos' ? 'active' : ''}
-              >
-                Especialidades
-              </a>
-            </li>
-            <li>
-              <a 
                 href="#artigos" 
                 className={activeSection === 'artigos' ? 'active' : ''}
               >
                 Artigos
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#servicos" 
+                className={activeSection === 'servicos' ? 'active' : ''}
+              >
+                Especialidades
               </a>
             </li>
             <li>
@@ -137,20 +137,20 @@ export default function Navbar() {
               </li>
               <li>
                 <a 
-                  href="#servicos" 
-                  className={activeSection === 'servicos' ? 'active' : ''} 
-                  onClick={handleLinkClick}
-                >
-                  Especialidades
-                </a>
-              </li>
-              <li>
-                <a 
                   href="#artigos" 
                   className={activeSection === 'artigos' ? 'active' : ''} 
                   onClick={handleLinkClick}
                 >
                   Artigos
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#servicos" 
+                  className={activeSection === 'servicos' ? 'active' : ''} 
+                  onClick={handleLinkClick}
+                >
+                  Especialidades
                 </a>
               </li>
               <li>
